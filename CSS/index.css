@@ -185,7 +185,7 @@ body {
 .top-content h2 {
   font-size: 2.8rem;
   padding: 4.4rem 1.5rem 4rem;
-  border-bottom: 2px solid #b0b1c2;
+  border-bottom: 2px solid #848989;
   line-height: 3.5rem;
   margin: 0 10px;
 }
@@ -227,6 +227,41 @@ body {
   flex-direction: column;
   text-align: center;
 }
+.bottom-content h3 {
+  font-size: 2.2rem;
+  padding: 2rem 1.5rem 1rem;
+  line-height: 3.5rem;
+  margin: 0 10px;
+}
+.bottom-content p {
+  line-height: 2.5rem;
+  font-size: 1.4rem;
+}
 .bottom-content img {
   width: 100%;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #b8bbbb;
+  padding: 60px 0 60px;
+}
+footer .icon-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+footer .icon-links a {
+  margin: 0 1rem;
+  color: #b8bbbb;
+  font-size: 2.5rem;
+}
+footer .copyright {
+  font-size: 0.8em;
 }
