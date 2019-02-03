@@ -161,7 +161,7 @@ body {
 }
 .banner p {
   font-size: 1.8rem;
-  line-height: 2.4rem;
+  line-height: 2.8rem;
   margin-bottom: 2rem;
 }
 .banner a {
@@ -173,4 +173,25 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 15px;
+}
+.top-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.top-content h2 {
+  font-size: 2.8rem;
+  padding: 4.4rem 1.5rem 4rem;
+  border-bottom: 2px solid #b0b1c2;
+  line-height: 3.5rem;
+  margin: 0 10px;
+}
+.top-content p {
+  padding: 2.4rem 1.5rem;
+  line-height: 2.5rem;
+}
+.top-content img {
+  width: 100%;
 }
