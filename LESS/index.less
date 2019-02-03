@@ -1,3 +1,4 @@
+@import './reset.less';
 @import './variables';
 @import './mixins';
 // @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic,900');
@@ -6,14 +7,50 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 html, body {
   margin: 0;
   padding: 0;
 }
 
 body {
-  .flex(none, center, column);
-  background-color: @lambda-times-color-background;
-  color: @lambda-times-color-primary;
-  font-family: 'PT Sans', sans-serif;
+  background-color: @tipsease-light-shades;
+  color: @tipsease-dark-shades;
+  font-family: @tipsease-font-family;
+  font-size: 1.6rem;
+}
+
+.banner {
+  .flex(center, center, column);
+  background-image: url(/assets/tip-jar.jpg);
+  padding: 5rem 3rem 4rem 3rem;
+  color: @tipsease-light-shades;
+  text-align: center;
+  background-position: left center;
+
+  h1 {
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+    margin-top: 2.8rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  a {
+    background-color: @tipsease-light-shades;
+    width: 100%;
+    border-radius: 5px;
+    color: @tipsease-dark-shades;
+    text-decoration: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
 }
