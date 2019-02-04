@@ -102,9 +102,8 @@ section:not(.banner) {
   }
 
   section:not(:last-child) {
-    box-shadow: 0 2px 0 0 lighten(@tipsease-dark-accent, 35%);
-
     @media @desktop {
+      box-shadow: 0 2px 0 0 lighten(@tipsease-dark-accent, 35%);
       margin-bottom: 4rem;
     }
   }
@@ -113,7 +112,7 @@ section:not(.banner) {
 .top-content {
   .flex(center, center, column);
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
   background-color: @tipsease-dark-shades;
   color: @tipsease-light-shades;
 
@@ -161,7 +160,7 @@ section:not(.banner) {
 .middle-content {
   .flex(center, center, column);
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
   background-color: white;
 
   @media @desktop {
@@ -269,6 +268,8 @@ section:not(.banner) {
 
   .testimonial {
     background-color: white;
+    padding-bottom: 4rem;
+    margin-bottom: 1.5rem;
 
     @media @desktop {
       .card;
