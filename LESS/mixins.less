@@ -4,3 +4,38 @@
   align-items: @ai;
   flex-direction: @dir;
 }
+
+.button(@btnbc: @tipsease-main-brand, @btnc: @tipsease-light-shades) {
+    background: @btnbc;
+    color: @btnc;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 6px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    text-decoration: none;
+    vertical-align: center;
+    margin: 0 10px 15px;
+    border: 2px solid @btnbc;
+
+    &:hover {
+      color: @btnbc;
+      background: @btnc;
+    }
+
+    @media @desktop {
+      width: auto;
+      font-size: 2.5rem;
+      min-width: 256px;
+      height: 6rem;
+    }
+}
+
+.card() {
+  box-shadow: 0 2px 0 0 lighten(@tipsease-dark-accent, 35%);
+  border-radius: 6px;
+
+  @media @desktop {
+    margin-bottom: 4rem;
+  }
+}
