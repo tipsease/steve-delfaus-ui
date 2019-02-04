@@ -309,7 +309,6 @@ body {
   flex-direction: column;
   text-align: center;
   margin-bottom: 1.5rem;
-  background-color: #282B2D;
   color: #EEF1E3;
 }
 @media (min-width: 1000px) {
@@ -349,6 +348,7 @@ body {
   }
 }
 .middle-content .middle-row .feature {
+  background-color: #282B2D;
   margin: 0 10px;
   border-bottom: 1px solid #86A38C;
 }
