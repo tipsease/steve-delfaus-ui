@@ -310,6 +310,7 @@ body {
   text-align: center;
   margin-bottom: 1.5rem;
   color: #EEF1E3;
+  background-color: #282B2D;
 }
 @media (min-width: 1000px) {
   .middle-content {
@@ -348,7 +349,6 @@ body {
   }
 }
 .middle-content .middle-row .feature {
-  background-color: #282B2D;
   margin: 0 10px;
   border-bottom: 1px solid #86A38C;
 }
