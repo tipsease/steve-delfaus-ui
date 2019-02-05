@@ -177,6 +177,8 @@ section:not(.banner) {
   }
 
   .middle-row {
+    width: 100%;
+    padding: 0 10px;
     .flex(center, center, column);
 
     // the 4 Box layout
@@ -211,10 +213,12 @@ section:not(.banner) {
       // background-color: @tipsease-dark-shades;
       margin: 0 10px;
       border-bottom: 1px solid @tipsease-light-accent;
+      width: 100%;
 
       @media @desktop {
         margin: 0;
         width: 50%;
+        height: 400px;
         border-bottom: none;
       }
 
