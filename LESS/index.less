@@ -47,11 +47,16 @@ section:not(.banner) {
 
 .banner {
   .flex(center, center, column);
-  background-color: @tipsease-dark-shades;
+  // background-color: @tipsease-dark-shades;
+  background-image: url('/assets/banner.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   padding: 1rem 3rem 4rem 3rem;
+  // color: @tipsease-light-shades;
   color: @tipsease-light-shades;
   text-align: center;
-  background-position: left center;
 
   @media @desktop {
     height: 100vh;
@@ -72,6 +77,9 @@ section:not(.banner) {
     font-size: 1.8rem;
     line-height: 2.8rem;
     margin-bottom: 2rem;
+    background-color: fade(@tipsease-dark-shades, 60%);
+    padding: 5px 20px;
+    border-radius: 6px;
 
     @media @desktop {
       font-size: 2.5rem;
