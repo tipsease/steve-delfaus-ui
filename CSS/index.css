@@ -361,6 +361,7 @@ body {
 @media (min-width: 1000px) {
   .middle-content .middle-row .feature {
     margin: 0;
+    width: 50%;
     border-bottom: none;
   }
 }
