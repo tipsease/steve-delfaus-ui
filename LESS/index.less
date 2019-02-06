@@ -30,6 +30,10 @@ section:not(.banner) {
   }
 }
 
+section {
+  margin-bottom: 2rem;
+}
+
 .accent1 {
   background-color: @tipsease-accent-1;
 }
@@ -110,13 +114,17 @@ section:not(.banner) {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   @media @desktop {
     margin: -21rem auto 0;
     max-width: calc(100% - 15rem);
     width: 120rem;
   }
 
-  section:not(:last-child) {
+  section:not(section:last-child) {
     @media @desktop {
       box-shadow: 0 2px 0 0 lighten(@tipsease-dark-accent, 35%);
       margin-bottom: 4rem;
@@ -127,7 +135,7 @@ section:not(.banner) {
 .top-content {
   .flex(center, center, column);
   text-align: center;
-  margin-bottom: 1.5rem;
+  // margin-bottom: 1.5rem;
   background-color: @tipsease-light-shades;
   color: @tipsease-dark-shades;
 
@@ -189,9 +197,10 @@ section:not(.banner) {
 .middle-content {
   .flex(center, center, column);
   text-align: center;
-  margin-bottom: 1.5rem;
+  // margin-bottom: 1.5rem;
   color: @tipsease-light-shades;
   background-color: @tipsease-dark-shades;
+  width: 100%;
 
   @media @desktop {
     padding: 4.4rem;
@@ -241,13 +250,13 @@ section:not(.banner) {
   text-align: center;
 
   @media @desktop {
-    .flex(center, center, row);
+    .flex(center, flex-start, row);
   }
 
   .testimonial {
     background-color: @tipsease-light-shades;
     padding-bottom: 4rem;
-    margin-bottom: 1.5rem;
+    // margin-bottom: 1.5rem;
 
     @media @desktop {
       .card;
@@ -301,6 +310,10 @@ section:not(.banner) {
       }
     }
   }
+}
+
+.who-we-are {
+  .button;
 }
 
 footer {

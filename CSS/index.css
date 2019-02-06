@@ -212,6 +212,9 @@ body {
     border-radius: 6px;
   }
 }
+section {
+  margin-bottom: 2rem;
+}
 .accent1 {
   background-color: #E89980;
 }
@@ -319,6 +322,12 @@ body {
     height: 6rem;
   }
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 @media (min-width: 1000px) {
   .container {
     margin: -21rem auto 0;
@@ -327,7 +336,7 @@ body {
   }
 }
 @media (min-width: 1000px) {
-  .container section:not(:last-child) {
+  .container section:not(section:last-child) {
     box-shadow: 0 2px 0 0 #caccc6;
     margin-bottom: 4rem;
   }
@@ -338,7 +347,6 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  margin-bottom: 1.5rem;
   background-color: #EEF1E3;
   color: #282B2D;
 }
@@ -405,9 +413,9 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  margin-bottom: 1.5rem;
   color: #EEF1E3;
   background-color: #282B2D;
+  width: 100%;
 }
 @media (min-width: 1000px) {
   .middle-content {
@@ -461,14 +469,13 @@ body {
   .bottom-content {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
   }
 }
 .bottom-content .testimonial {
   background-color: #EEF1E3;
   padding-bottom: 4rem;
-  margin-bottom: 1.5rem;
 }
 @media (min-width: 1000px) {
   .bottom-content .testimonial {
@@ -533,6 +540,31 @@ body {
 @media (min-width: 1000px) {
   .bottom-content .testimonial img {
     border-radius: 6px 6px 0 0;
+  }
+}
+.who-we-are {
+  background: #67AB4C;
+  color: #EEF1E3;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 6px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-decoration: none;
+  vertical-align: center;
+  margin: 0 10px 15px;
+  border: 2px solid #67AB4C;
+}
+.who-we-are:hover {
+  color: #67AB4C;
+  background: #EEF1E3;
+}
+@media (min-width: 800px) {
+  .who-we-are {
+    width: auto;
+    font-size: 2.5rem;
+    min-width: 256px;
+    height: 6rem;
   }
 }
 footer {
