@@ -606,3 +606,17 @@ footer .copyright {
     font-size: 2.2rem;
   }
 }
+@media (min-width: 1000px) {
+  .about .top-content {
+    padding-top: 0;
+  }
+}
+.about .top-content img {
+  margin-top: 0px;
+  border-radius: 6px 6px 0 0;
+}
+@media (min-width: 1000px) {
+  .about .top-content img {
+    padding-top: 0;
+  }
+}
