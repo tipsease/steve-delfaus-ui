@@ -207,7 +207,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.6rem;
 }
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   section:not(.banner) {
     border-radius: 6px;
   }
@@ -478,6 +478,11 @@ body {
     margin-left: 2rem;
   }
 }
+@media (min-width: 1000px) and (min-width: 800px) {
+  .bottom-content .testimonial {
+    margin-bottom: 3rem;
+  }
+}
 @media (min-width: 1000px) and (min-width: 1000px) {
   .bottom-content .testimonial {
     margin-bottom: 4rem;
@@ -489,6 +494,11 @@ body {
   line-height: 3.5rem;
   margin: 0 10px;
 }
+@media (min-width: 800px) {
+  .bottom-content .testimonial h3 {
+    font-size: 3.2rem;
+  }
+}
 @media (min-width: 1000px) {
   .bottom-content .testimonial h3 {
     margin-top: 2rem;
@@ -498,6 +508,12 @@ body {
 .bottom-content .testimonial p {
   line-height: 2.5rem;
   font-size: 1.4rem;
+}
+@media (min-width: 800px) {
+  .bottom-content .testimonial p {
+    font-size: 1.8rem;
+    line-height: 3.1rem;
+  }
 }
 @media (min-width: 1000px) {
   .bottom-content .testimonial p {
@@ -537,7 +553,7 @@ footer .icon-links a {
   color: #86A38C;
   font-size: 2.5rem;
 }
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   footer .icon-links a {
     font-size: 4.5rem;
   }
