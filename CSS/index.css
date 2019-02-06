@@ -567,6 +567,9 @@ section {
   }
 }
 @media (min-width: 800px) {
+  .who-we-are {
+    margin-top: 4rem;
+  }
 }
 footer {
   display: flex;
