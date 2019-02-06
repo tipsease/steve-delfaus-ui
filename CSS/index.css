@@ -256,6 +256,15 @@ section {
     padding: 0 0 30rem 0;
   }
 }
+.banner nav {
+  text-align: right;
+  width: 120rem;
+}
+.banner .nav {
+  text-decoration: none;
+  color: #86A38C;
+  border: 2px solid #86A38C;
+}
 .banner img {
   width: 100%;
   margin-bottom: 2rem;
@@ -301,7 +310,7 @@ section {
     width: auto;
   }
 }
-.banner a {
+.banner .banner-buttons a {
   background: #67AB4C;
   color: #EEF1E3;
   width: 100%;
@@ -314,12 +323,12 @@ section {
   margin: 0 10px 15px;
   border: 2px solid #67AB4C;
 }
-.banner a:hover {
+.banner .banner-buttons a:hover {
   color: #67AB4C;
   background: #EEF1E3;
 }
 @media (min-width: 800px) {
-  .banner a {
+  .banner .banner-buttons a {
     width: auto;
     font-size: 2.5rem;
     min-width: 256px;
@@ -340,7 +349,7 @@ section {
   }
 }
 @media (min-width: 1000px) {
-  .container section:not(section:last-child) {
+  .container section:not(.bottom-content) {
     box-shadow: 0 2px 0 0 #caccc6;
     margin-bottom: 4rem;
   }

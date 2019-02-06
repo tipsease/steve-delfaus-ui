@@ -71,6 +71,19 @@ section {
     padding: 0 0 30rem 0;
   }
 
+  nav {
+    text-align: right;
+    width: 120rem;
+
+  }
+
+  .nav {
+    text-decoration: none;
+    color: @tipsease-light-accent;
+    // padding: 10px 50px;
+    border: 2px solid @tipsease-light-accent;
+  }
+
   img {
     width: 100%;
     margin-bottom: 2rem;
@@ -107,11 +120,12 @@ section {
       .flex(center, center, row);
       width: auto;
     }
+
+    a {
+      .button;
+    }
   }
 
-  a {
-    .button;
-  }
 }
 
 .container {
@@ -125,7 +139,7 @@ section {
     width: 120rem;
   }
 
-  section:not(section:last-child) {
+  section:not(.bottom-content) {
     @media @desktop {
       box-shadow: 0 2px 0 0 lighten(@tipsease-dark-accent, 35%);
       margin-bottom: 4rem;
