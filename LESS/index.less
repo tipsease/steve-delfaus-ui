@@ -48,14 +48,12 @@ section:not(.banner) {
 
 .banner {
   .flex(center, center, column);
-  // background-color: @tipsease-dark-shades;
   background-image: url('/assets/banner.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   padding: 1rem 3rem 4rem 3rem;
-  // color: @tipsease-light-shades;
   color: @tipsease-light-shades;
   text-align: center;
 
@@ -104,9 +102,6 @@ section:not(.banner) {
       .flex(center, center, row);
       width: auto;
     }
-
-    // @media @desktop {
-    // }
   }
 
   a {
@@ -143,7 +138,6 @@ section:not(.banner) {
   h2 {
     font-size: 2.8rem;
     padding: 4.4rem 1.5rem 4rem;
-    // border-bottom: 2px solid lighten(@tipsease-dark-shades, 50%);
     border-bottom: 2px solid @tipsease-light-accent;
     line-height: 3.5rem;
     margin: 0 10px;
@@ -151,12 +145,15 @@ section:not(.banner) {
     @media @tablet {
       font-size: 3.8rem;
       line-height: 5.5rem;
+      padding: 4.4rem 2rem 4rem;
+      margin: 0 3rem;
     }
 
     @media @desktop {
       font-size: 4.8rem;
       line-height: 6.5rem;
       border-bottom: none;
+      padding: 4.4rem 15.5rem 4rem;
     }
   }
 
@@ -168,6 +165,7 @@ section:not(.banner) {
       font-size: 2.2rem;
       line-height: 3.6rem;
       padding: 5rem 0rem;
+      margin: 0 5rem;
     }
 
     @media @desktop {
