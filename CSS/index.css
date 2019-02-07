@@ -171,7 +171,7 @@ table {
   }
 }
 .feature p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 2.5rem;
   margin-bottom: 3.5rem;
 }
@@ -244,11 +244,11 @@ section {
 @media (min-width: 800px) {
   .banner {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    padding: 0 0 10rem 0;
+    padding: 0 0 0 0;
   }
 }
 @media (min-width: 1000px) {
@@ -256,21 +256,49 @@ section {
     padding: 0 0 30rem 0;
   }
 }
-.banner nav {
-  display: flex;
-  margin: 0 auto;
+.banner .banner-container {
+  position: relative;
   width: 100%;
-  justify-content: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 800px) {
+  .banner .banner-container {
+    max-width: calc(100% - 15rem);
+    width: 120rem;
+    height: 100vh;
+  }
+}
+.banner nav {
+  display: none;
+  margin-top: 10px;
+}
+.banner nav a {
+  text-decoration: none;
+  color: #67AB4C;
+  width: 128px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-bottom: 2px solid transparent;
+}
+.banner nav a:hover,
+.banner nav a.active {
+  border-bottom: 2px solid #67AB4C;
 }
 @media (min-width: 800px) {
   .banner nav {
-    width: 120rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
-}
-.banner .nav {
-  text-decoration: none;
-  color: #86A38C;
-  border: 2px solid #86A38C;
 }
 .banner img {
   width: 100%;
@@ -284,7 +312,7 @@ section {
 @media (min-width: 1000px) {
   .banner img {
     width: auto;
-    margin-bottom: 4rem;
+    margin: 6rem 0 4rem;
   }
 }
 .banner p {
@@ -294,6 +322,11 @@ section {
   background-color: rgba(40, 43, 45, 0.6);
   padding: 5px 20px;
   border-radius: 6px;
+}
+@media (min-width: 800px) {
+  .banner p {
+    font-size: 2.2rem;
+  }
 }
 @media (min-width: 1000px) {
   .banner p {
@@ -640,5 +673,5 @@ footer .copyright {
 .about .middle-content img {
   margin-top: 3rem;
   border-radius: 50%;
-  max-width: 8.5rem;
+  max-width: 10.5rem;
 }

@@ -62,30 +62,52 @@ section {
   text-align: center;
 
   @media @tablet {
-    .flex(center, center, column);
+    .flex(flex-start, center, column);
     height: 100vh;
-    padding: 0 0 10rem 0;
+    padding: 0 0 0 0;
   }
 
   @media @desktop {
     padding: 0 0 30rem 0;
   }
 
-  nav {
-    display: flex;
-    margin: 0 auto;
+  .banner-container {
+    position: relative;
     width: 100%;
-    justify-content: flex-end;
+    .flex(center, center, column);
     @media @tablet {
+      max-width: calc(100% - 15rem);
       width: 120rem;
+      height: 100vh;
     }
   }
 
-  .nav {
-    text-decoration: none;
-    color: @tipsease-light-accent;
-    // padding: 10px 50px;
-    border: 2px solid @tipsease-light-accent;
+  nav {
+    display: none;
+    margin-top: 10px;
+
+    a {
+      text-decoration: none;
+      color: @tipsease-main-brand;
+      width: 128px;
+      font-size: 1.6rem;
+      cursor: pointer;
+      padding: 10px 15px;
+      margin: 0 5px;
+      border-bottom: 2px solid transparent;
+
+      &:hover, &.active {
+        border-bottom: 2px solid @tipsease-main-brand;
+      }
+
+    }
+
+    @media @tablet {
+      .flex(center, center, row);
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
   }
 
   img {
@@ -98,7 +120,7 @@ section {
 
     @media @desktop {
       width: auto;
-      margin-bottom: 4rem;
+      margin: 6rem 0 4rem;
     }
   }
 
@@ -109,6 +131,10 @@ section {
     background-color: fade(@tipsease-dark-shades, 60%);
     padding: 5px 20px;
     border-radius: 6px;
+
+    @media @tablet {
+      font-size: 2.2rem;
+    }
 
     @media @desktop {
       font-size: 2.5rem;
@@ -400,7 +426,7 @@ footer {
     img {
       margin-top: 3rem;
       border-radius: 50%;
-      max-width: 8.5rem;
+      max-width: 10.5rem;
     }
   }
 }
