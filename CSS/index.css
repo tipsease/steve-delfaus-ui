@@ -245,16 +245,23 @@ section {
 .accent4 {
   background-color: #E5CB95;
 }
-.banner {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
+.banner-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   background-image: url('/assets/banner.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+.banner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   padding: 1rem 3rem 4rem 3rem;
   color: #EEF1E3;
   text-align: center;
