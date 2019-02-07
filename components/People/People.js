@@ -48,8 +48,8 @@ people.reduce((accu, cur) => {
   return thisRow;
 }, []);
 
-// Map each row to a string and join it all into one big chunk of html elements
-const elements = rows.map(r => {
+// create a new middle-row for each group of 2 people and then append each person.element to the row;
+const rowElements = rows.map(r => {
   const rowElement = htmlToElement('<div class="middle-row"></div>');
   r.forEach(p => rowElement.append(p.element));
   return rowElement;
@@ -58,4 +58,4 @@ const elements = rows.map(r => {
 
 // append them to the middle-content div
 const middleContent = document.querySelector('.middle-content');
-elements.forEach(e => middleContent.append(e));
+rowElements.forEach(e => middleContent.append(e));
