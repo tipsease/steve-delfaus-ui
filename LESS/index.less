@@ -4,8 +4,6 @@
 @import '../components/Feature/Feature.less';
 @import '../components/MenuButton/MenuButton.less';
 
-// @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic,900');
-
 * {
   box-sizing: border-box;
 }
@@ -183,7 +181,6 @@ section {
 .top-content {
   .flex(center, center, column);
   text-align: center;
-  // margin-bottom: 1.5rem;
   background-color: @tipsease-light-shades;
   color: @tipsease-dark-shades;
 
@@ -245,7 +242,6 @@ section {
 .middle-content {
   .flex(center, center, column);
   text-align: center;
-  // margin-bottom: 1.5rem;
   color: @tipsease-light-shades;
   background-color: @tipsease-dark-shades;
   width: 100%;
@@ -306,7 +302,6 @@ section {
   .testimonial {
     background-color: @tipsease-light-shades;
     padding-bottom: 4rem;
-    // margin-bottom: 1.5rem;
     &:first-child {
       margin-bottom: 2rem;
     }
@@ -373,9 +368,6 @@ section {
 
   @media @tablet {
     margin-top: 4rem;
-    // width: 100%;
-    // margin-left: 30rem;
-    // margin-right: 30rem;
   }
 }
 
@@ -446,16 +438,15 @@ footer {
   width: 200px;
   margin-left: -200px;
   background: @tipsease-dark-shades;
+  transition: transform 0.5s;
+  transform: matrix(1,0,0,1,200,0);
 
   @media @tablet {
-    display: none;
+    transform: matrix(1,0,0,1,0,0);
   }
 
   &.menu-hidden {
-    display: none;
-    @media @tablet {
-      display: none;
-    }
+    transform: matrix(1,0,0,1,0,0);
   }
 
   a {
@@ -469,5 +460,16 @@ footer {
     &.active, &:hover {
       color: lighten(@tipsease-light-accent, 20%);
     }
+  }
+}
+
+.slide-wrapper {
+  transition: transform 0.5s;
+  transform: matrix(1,0,0,1,200,0);
+  @media @tablet {
+    transform: matrix(1,0,0,1,0,0);
+  }
+  &.menu-hidden {
+    transform: matrix(1,0,0,1,0,0);
   }
 }

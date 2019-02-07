@@ -704,19 +704,16 @@ footer .copyright {
   width: 200px;
   margin-left: -200px;
   background: #282B2D;
+  transition: transform 0.5s;
+  transform: matrix(1, 0, 0, 1, 200, 0);
 }
 @media (min-width: 800px) {
   .nav-panel {
-    display: none;
+    transform: matrix(1, 0, 0, 1, 0, 0);
   }
 }
 .nav-panel.menu-hidden {
-  display: none;
-}
-@media (min-width: 800px) {
-  .nav-panel.menu-hidden {
-    display: none;
-  }
+  transform: matrix(1, 0, 0, 1, 0, 0);
 }
 .nav-panel a {
   text-decoration: none;
@@ -729,4 +726,16 @@ footer .copyright {
 .nav-panel a.active,
 .nav-panel a:hover {
   color: #c0cfc3;
+}
+.slide-wrapper {
+  transition: transform 0.5s;
+  transform: matrix(1, 0, 0, 1, 200, 0);
+}
+@media (min-width: 800px) {
+  .slide-wrapper {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+}
+.slide-wrapper.menu-hidden {
+  transform: matrix(1, 0, 0, 1, 0, 0);
 }
