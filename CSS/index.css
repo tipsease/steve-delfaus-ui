@@ -257,8 +257,15 @@ section {
   }
 }
 .banner nav {
-  text-align: right;
-  width: 120rem;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: flex-end;
+}
+@media (min-width: 800px) {
+  .banner nav {
+    width: 120rem;
+  }
 }
 .banner .nav {
   text-decoration: none;
