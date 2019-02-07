@@ -190,11 +190,29 @@ table {
 .feature img {
   width: 100%;
 }
+.menu-button {
+  background: rgba(255, 255, 255, 0.4);
+  font-size: 3rem;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fffffe;
+  padding: 15px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+@media (min-width: 800px) {
+  .menu-button {
+    display: none;
+  }
+}
 * {
   box-sizing: border-box;
 }
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 html,
 body {
@@ -674,4 +692,41 @@ footer .copyright {
   margin-top: 3rem;
   border-radius: 50%;
   max-width: 10.5rem;
+}
+.nav-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 200px;
+  margin-left: -200px;
+  background: #282B2D;
+}
+@media (min-width: 800px) {
+  .nav-panel {
+    display: none;
+  }
+}
+.nav-panel.menu-hidden {
+  display: none;
+}
+@media (min-width: 800px) {
+  .nav-panel.menu-hidden {
+    display: none;
+  }
+}
+.nav-panel a {
+  text-decoration: none;
+  color: #67AB4C;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1.5rem 0 1.5rem 1rem;
+  border-bottom: 1px solid #737669;
+}
+.nav-panel a.active,
+.nav-panel a:hover {
+  color: #c0cfc3;
 }

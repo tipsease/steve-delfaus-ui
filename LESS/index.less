@@ -2,6 +2,8 @@
 @import './variables';
 @import './mixins';
 @import '../components/Feature/Feature.less';
+@import '../components/MenuButton/MenuButton.less';
+
 // @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic,900');
 
 * {
@@ -10,6 +12,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 html, body {
@@ -427,6 +430,44 @@ footer {
       margin-top: 3rem;
       border-radius: 50%;
       max-width: 10.5rem;
+    }
+  }
+}
+
+
+.nav-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 200px;
+  margin-left: -200px;
+  background: @tipsease-dark-shades;
+
+  @media @tablet {
+    display: none;
+  }
+
+  &.menu-hidden {
+    display: none;
+    @media @tablet {
+      display: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: @tipsease-main-brand;
+    font-size: 2.0rem;
+    cursor: pointer;
+    padding: 1.5rem 0 1.5rem 1rem;
+    border-bottom: 1px solid @tipsease-dark-accent;
+
+    &.active, &:hover {
+      color: lighten(@tipsease-light-accent, 20%);
     }
   }
 }
