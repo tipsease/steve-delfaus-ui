@@ -1,9 +1,16 @@
+@import './reset.less';
 @import './variables';
 @import './mixins';
-// @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic,900');
+@import '../components/Feature/Feature.less';
+@import '../components/MenuButton/MenuButton.less';
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 html, body {
@@ -12,8 +19,473 @@ html, body {
 }
 
 body {
-  .flex(none, center, column);
-  background-color: @lambda-times-color-background;
-  color: @lambda-times-color-primary;
-  font-family: 'PT Sans', sans-serif;
+  background-color: lighten(@tipsease-dark-accent, 45%);
+  color: @tipsease-dark-shades;
+  font-family: @tipsease-font-family;
+  font-size: 1.6rem;
+}
+
+section:not(.banner) {
+  @media @desktop {
+    border-radius: 6px;
+  }
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.accent1 {
+  background-color: @tipsease-accent-1;
+}
+
+.accent2 {
+  background-color: @tipsease-accent-2;
+}
+
+.accent3 {
+  background-color: @tipsease-accent-3;
+}
+
+.accent4 {
+  background-color: @tipsease-accent-4;
+}
+
+.banner-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url('/assets/banner.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.banner {
+  .flex(flex-start, center, column);
+  padding: 1rem 3rem 4rem 3rem;
+  color: @tipsease-light-shades;
+  text-align: center;
+
+  @media @tablet {
+    .flex(flex-start, center, column);
+    height: 100vh;
+    padding: 0 0 0 0;
+  }
+
+  @media @desktop {
+    padding: 0 0 30rem 0;
+  }
+
+  .banner-container {
+    position: relative;
+    width: 100%;
+    .flex(center, center, column);
+    @media @tablet {
+      max-width: calc(100% - 15rem);
+      width: 120rem;
+      height: 100vh;
+    }
+  }
+
+  nav {
+    display: none;
+    margin-top: 10px;
+
+    a {
+      text-decoration: none;
+      color: @tipsease-main-brand;
+      width: 128px;
+      font-size: 1.6rem;
+      cursor: pointer;
+      padding: 10px 15px;
+      margin: 0 5px;
+      border-bottom: 2px solid transparent;
+
+      &:hover, &.active {
+        border-bottom: 2px solid @tipsease-main-brand;
+      }
+
+    }
+
+    @media @tablet {
+      .flex(center, center, row);
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: 2rem;
+
+    @media @tablet {
+      max-width: 400px;
+    }
+
+    @media @desktop {
+      width: auto;
+      margin: 6rem 0 4rem;
+    }
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 2rem;
+    background-color: fade(@tipsease-dark-shades, 60%);
+    padding: 5px 20px;
+    border-radius: 6px;
+
+    @media @tablet {
+      font-size: 2.2rem;
+    }
+
+    @media @desktop {
+      font-size: 2.5rem;
+      margin-bottom: 8rem;
+    }
+  }
+
+  .banner-buttons {
+    .flex(center, center, column);
+    width: 100%;
+
+    @media @tablet {
+      .flex(center, center, row);
+      width: auto;
+    }
+
+    a {
+      .button;
+    }
+  }
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: lighten(@tipsease-dark-accent, 45%);
+  @media @desktop {
+    border-radius: 18px 18px 0 0;
+    margin: -21rem auto 0;
+    max-width: calc(100% - 15rem);
+    width: 120rem;
+  }
+
+  section:not(.bottom-content) {
+    @media @desktop {
+      box-shadow: 0 2px 0 0 lighten(@tipsease-dark-accent, 35%);
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.top-content {
+  .flex(center, center, column);
+  text-align: center;
+  background-color: @tipsease-light-shades;
+  color: @tipsease-dark-shades;
+
+  margin-top: 2rem;
+
+  @media @tablet {
+    margin-top: 0;
+  }
+
+  @media @desktop {
+    padding-top: 4.5rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+    padding: 4.4rem 1.5rem 4rem;
+    border-bottom: 2px solid @tipsease-light-accent;
+    line-height: 3.5rem;
+    margin: 0 10px;
+
+    @media @tablet {
+      font-size: 3.8rem;
+      line-height: 5.5rem;
+      padding: 4.4rem 2rem 4rem;
+      margin: 0 3rem;
+    }
+
+    @media @desktop {
+      font-size: 4.8rem;
+      line-height: 6.5rem;
+      border-bottom: none;
+      padding: 4.4rem 15.5rem 4rem;
+    }
+  }
+
+  p {
+    padding: 2.4rem 1.5rem;
+    line-height: 2.5rem;
+
+    @media @tablet {
+      font-size: 2.2rem;
+      line-height: 3.6rem;
+      padding: 5rem 0rem;
+      margin: 0 5rem;
+    }
+
+    @media @desktop {
+      border-top: 2px solid @tipsease-light-accent;
+      font-size: 2.8rem;
+      line-height: 4.2rem;
+      padding: 6rem 0rem;
+    }
+  }
+
+  img {
+    width: 100%;
+
+    @media @desktop {
+      border-radius: 0 0 6px 6px;
+      margin-top: 3rem;
+    }
+  }
+}
+
+.middle-content {
+  .flex(center, center, column);
+  text-align: center;
+  color: @tipsease-light-shades;
+  background-color: @tipsease-dark-shades;
+  width: 100%;
+
+  @media @desktop {
+    padding: 6.4rem;
+  }
+
+  .middle-row {
+    width: 100%;
+    padding: 0 10px;
+    .flex(center, center, column);
+
+    // the 4 Box layout
+    @media @desktop {
+      .flex(center, center, row);
+
+      .feature {
+        border-bottom: 3px solid @tipsease-light-accent;
+
+        &:first-child {
+          padding: 64px 64px 64px 0;
+          border-right: 3px solid @tipsease-light-accent;
+        }
+
+        &:last-child {
+          padding: 64px 0 64px 64px;
+        }
+      }
+
+      &:last-child .feature {
+        &:first-child {
+          border-right: 3px solid @tipsease-light-accent;
+          padding: 64px 64px 0 0;
+          border-bottom: none;
+        }
+
+        &:last-child {
+          padding: 64px 0 0 64px;
+        }
+      }
+    }
+    &:last-child .feature:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.bottom-content {
+  .flex(center, center, column);
+
+  text-align: center;
+
+  @media @desktop {
+    .flex(flex-start, stretch, row);
+  }
+
+  .testimonial {
+    background-color: @tipsease-light-shades;
+    padding-bottom: 4rem;
+    &:first-child {
+      margin-bottom: 2rem;
+    }
+
+    @media @desktop {
+      .card;
+
+      &:first-child {
+        margin-right: 2rem;
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        margin-left: 2rem;
+        padding-bottom: 0;
+      }
+    }
+
+    h3 {
+      font-size: 2.2rem;
+      padding: 2.0rem 1.5rem 1rem;
+      line-height: 3.5rem;
+      margin: 0 10px;
+
+      @media @tablet {
+        font-size: 3.2rem;
+      }
+
+      @media @desktop {
+        margin-top: 2rem;
+        font-size: 4rem;
+      }
+    }
+
+    p {
+      line-height: 2.5rem;
+      font-size: 1.4rem;
+
+      @media @tablet {
+        font-size: 1.8rem;
+        line-height: 3.1rem;
+      }
+
+      @media @desktop {
+        margin-top: 2.8rem;
+        font-size: 2.2rem;
+        line-height: 3.7rem;
+        padding: 0 64px 3.2rem;
+      }
+    }
+
+    img {
+      width: 100%;
+
+      @media @desktop {
+        border-radius: 6px 6px 0 0;
+      }
+    }
+  }
+}
+
+.who-we-are {
+  .button;
+
+  @media @tablet {
+    margin-top: 4rem;
+  }
+}
+
+footer {
+  .flex(center, center, column);
+  text-align: center;
+  color: @tipsease-light-accent;
+  padding: 60px 0 60px;
+
+  .icon-links {
+    .flex(center, center);
+    width: 100%;
+    margin-bottom: 3rem;
+    a {
+      margin: 0 1rem;
+      color: @tipsease-light-accent;
+      font-size: 2.5rem;
+
+      @media @tablet {
+        font-size: 4.5rem;
+      }
+    }
+  }
+
+  .copyright {
+    font-size: .8em;
+
+    @media @desktop {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.about {
+  .top-content {
+
+    @media @desktop {
+      padding-top: 0;
+    }
+
+    img {
+      margin-top: 0px;
+      @media @desktop {
+        border-radius: 6px 6px 0 0;
+        padding-top: 0;
+      }
+    }
+  }
+
+  .middle-content {
+    img {
+      margin-top: 3rem;
+      border-radius: 50%;
+      max-width: 10.5rem;
+    }
+  }
+}
+
+
+.nav-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 200px;
+  margin-left: -200px;
+  background: @tipsease-dark-shades;
+  transition: transform 0.5s;
+  transform: matrix(1,0,0,1,200,0);
+
+  @media @tablet {
+    transform: matrix(1,0,0,1,0,0);
+  }
+
+  &.menu-hidden {
+    transform: matrix(1,0,0,1,0,0);
+  }
+
+  a {
+    text-decoration: none;
+    color: @tipsease-main-brand;
+    font-size: 2.0rem;
+    cursor: pointer;
+    padding: 1.5rem 0 1.5rem 1rem;
+    border-bottom: 1px solid @tipsease-dark-accent;
+
+    &.active, &:hover {
+      color: lighten(@tipsease-light-accent, 20%);
+    }
+  }
+}
+
+.slide-wrapper {
+  transition: transform 0.5s;
+  transform: matrix(1,0,0,1,200,0);
+  @media @tablet {
+    transform: matrix(1,0,0,1,0,0);
+  }
+  &.menu-hidden {
+    transform: matrix(1,0,0,1,0,0);
+  }
 }
