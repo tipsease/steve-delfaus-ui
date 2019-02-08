@@ -8,6 +8,7 @@ const people = [
      {   name:   'Jonas'  , githubName:   'unknownmonk'     , job: 'Landing Page' },
      {   name:   'Steve'  , githubName:   'heyjuststart'    , job: 'Landing Page' },
      {   name:   'Kai'    , githubName:   'tryingtokeepup'  , job: 'Backend'},
+     {   name:   'David'  , githubName:   'freitagDavid'    , job: 'Backend'},
      {   name:   'Angel'  , githubName:   'angelbuenrostro' , job: 'iOS App'},
      {   name:   'Ray'    , githubName:   'raylomeli'       , job: 'Project Manager'}
 ];
@@ -37,7 +38,7 @@ class Person {
 // Each .middle-row holds 2 people
 // So go through people and group them in 2's
 const rows = [];
-people.reduce((accu, cur) => {
+const finalGroup = people.reduce((accu, cur) => {
   let thisRow = accu;
   if( thisRow.length === 2) {
     rows.push(thisRow);
@@ -47,6 +48,7 @@ people.reduce((accu, cur) => {
   thisRow.push(new Person(cur));
   return thisRow;
 }, []);
+rows.push(finalGroup);
 
 // create a new middle-row for each group of 2 people and then append each person.element to the row;
 const rowElements = rows.map(r => {
